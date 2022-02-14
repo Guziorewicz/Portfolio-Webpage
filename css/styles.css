@@ -1,0 +1,339 @@
+
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --font-style: Robo, Unbutu;
+  --green1:#142615;
+  --green2:#224021;
+  --green3:#30592E;
+  --green4:#44733D;
+  --grey:#B9BFA4;
+  --gold:#ca6f25;
+  --orange:#ed9525;
+  --hoto:#fad251;
+
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body{
+padding: 0;
+margin: 0;
+font-family: var(--font-style);
+background-color: var(--green1);
+color: var(--white);
+font-size: var(--font-size);
+}
+
+img{
+  width: 100%;
+}
+
+section{
+background-color: var(--green1);
+color: var(--white);
+font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+margin: 0;
+}
+
+a{
+color:var(--orange);
+}
+
+a:hover{
+color: var(--hoto);
+text-decoration: none;
+}
+
+/* Intro styles*/
+
+#intro {
+padding: 4rem 1rem 10rem 1rem; 
+max-width: 1200px;
+margin: 0 auto;
+}
+#intro p {
+font-size: 1rem;
+line-height: 1.5;
+}
+
+#intro .name {
+font-family: var(--mono);  
+}
+
+.name span{ 
+font-family: var(--font-style);
+font-size: 4rem;
+color: var(--orange);
+display: block;
+}
+
+#intro h2{
+font-size: 4rem;
+font-weight: normal;
+}
+
+#contact {
+width: 400px;
+text-align: center;
+margin: 0 auto; 
+padding: 3rem 0;
+background-color: var(--gold);
+}
+
+#contact p:last-child {
+margin-top: 3rem;
+}
+
+
+/*background color divs*/
+
+.gradient{
+  background: linear-gradient(90deg, rgb(238, 186, 16) 40%, rgba(16,199,43,1) 90%);
+  height: 2px;
+}
+
+
+.section-background{
+  background-color: var(--gold);
+}
+.section-dkblue{
+  background-color: var(--green4);
+}
+
+/*navbar*/
+
+nav{
+font-family: var(--mono);
+font-size: 80%;
+padding: 1rem;
+}
+
+nav h1 a{
+font-family: var(--font-style);
+}
+
+nav ul{
+list-style-type: none; 
+padding: 0;
+margin: 0;
+display: flex; 
+flex-flow: row wrap;
+justify-content: center; 
+align-items: center; 
+gap: 2rem; 
+}
+
+nav li:first-child{
+flex-basis: 100%;
+text-align: center;
+
+}
+nav [class*="fa-"] {
+font-size: 150%;
+color: var(--orange);
+}
+nav h1 [class*="fa"] {
+font-size:100%;
+}
+
+nav a {
+color: var(--white);
+text-decoration: none;
+display: block; 
+}
+
+nav a:hover {
+  color: var(--hoto);
+}
+nav [class*="fa-"]:hover {
+color: var(--hoto);
+
+}
+
+/*Languages*/
+
+.eng{
+ background-color: var(--orange);
+ padding: 0.3rem;
+ border-radius: 10px;
+ font-family: var(--mono);
+}
+
+.eng:hover{
+  color: var(--white);
+  background-color:var(--hoto);
+  }
+
+.pl{
+  background-color: var(--orange);
+  padding: 0.3rem;
+  border-radius: 10px;
+  font-family: var(--mono);
+ }
+
+ .pl:hover{
+  color: var(--white);
+  background-color:var(--hoto);
+  }
+
+/*Buttons*/
+
+.button{
+background-color: var(--orange);
+padding: 0.5rem;
+border-radius: 100px; 
+color: var(--white);
+text-decoration: none;
+font-family: var(--mono);
+}
+.button:hover{
+color: var(--white);
+background-color:var(--hoto);
+}
+
+/*Course section*/
+
+#courses {
+  padding:4rem 1rem;
+  background-color: var(--green4);
+}
+
+#courses h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#courses h3 {
+  color: var(--orange);
+}
+#courses h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
+}
+.blackbox{
+  background-color: var(--green1);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 1.5; 
+}
+#courses ul{
+  list-style-type: none;
+  display: flex;
+  padding:0;
+  margin:0;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+#courses img{
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--orange);
+  border-bottom: 1px solid var(--orange);
+  border-radius: 25px;
+  padding: 1rem; 
+}
+
+/*Media*/
+
+@media (min-width: 550px){
+  article {
+    display:grid;
+    grid-template-columns: repeat(10,1fr); 
+    gap: 1rem;
+  }
+  #courses {
+    max-width: 1200px;
+    margin: 0 auto;  
+    
+  }
+  #courses img{
+    grid-column: 1/6; 
+    grid-row:1/1; 
+  }
+  
+  .text{
+    order: 2;  
+    text-align: right; 
+    grid-column: 4/11;  
+    grid-row:1/1;
+  }
+  #courses .reverse .text{
+    grid-column:1/7;
+    order: 2;
+    text-align: left;
+  }
+  #courses .reverse img{
+    grid-column:4/11;
+    grid-row:1/1;
+    
+  }
+  #courses .reverse ul{
+    justify-content: flex-start;
+  }
+  
+  #courses ul{
+    justify-content: flex-end; 
+  }
+}
+
+
+
+@media (min-width: 850px)  {
+
+nav{
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+nav li:first-child {
+  flex-basis: auto;
+  text-align: left;
+  margin-right: auto; 
+}
+}
+
+/*Footer*/
+
+footer {
+text-align: center;
+background-color: var(--green1);
+padding: 4rem 0;
+}
+
+footer ul{
+display: flex;
+flex-flow: row wrap;
+justify-content: center;  
+gap: 3rem;
+font-size: 3rem;
+list-style-type: none;
+padding: 0;
+margin: 2rem 0;
+}
+
+
+.me {
+  width: 70% 50%;
+  
+}
